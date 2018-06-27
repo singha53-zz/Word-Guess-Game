@@ -99,8 +99,75 @@ document.addEventListener('DOMContentLoaded', function(event) {
     myNode.appendChild(remainingGuessesPara);
   }
 
-  // 8. initial Hangman game
+  // check guesses
+  function checkGuess(input, country) {
+    if (country.indexOf(input) === -1) {
+      // displayletters used
+    } else {
+      // displayletters on lines
+      var letterDiv = document
+        .getElementById('country')
+        .querySelectorAll('.' + input);
+      for (let i = 0; i < letterDiv.length; i++) {
+        letterDiv[i].innerHTML = input;
+      }
+    }
+  }
+
+  // initial Hangman game
   var country = chooseCountry();
   displayCountryLines(country);
   displayInfo(wins, losses, triesLeft, guesses);
+
+  // add steps to excecute upon when alphabet letter keys are pressed
+  document.onkeyup = function(e) {
+    input = e.key.toUpperCase();
+    // alphabet.includes(input)
+    if (alphabet.indexOf(input) === -1) {
+      alert('Not a valid entry. Please only use letters of the alphabet!');
+    }
+
+    // only add input to guesses if letter has not been previously guessed
+    if (guesses.indexOf(input) === -1 && alphabet.indexOf(input) !== -1) {
+      guesses.push(input);
+      triesLeft = tries - guesses.length;
+    }
+
+    // check if user won!
+    var win = guesses.filter(function(e) {
+      return unique_char(country).indexOf(e) > -1;
+    });
+
+    checkGuess(input, country);
+
+    if (win.length === unique_char(country).length) {
+      document
+        .getElementById('flag')
+        .setAttribute('src', `flags/${country}.svg`);
+      guesses = [];
+      country = chooseCountry();
+      displayCountryLines(country);
+      wins++;
+      tries = 9;
+      triesLeft = 9;
+    } else if (guesses.length < tries) {
+      document.getElementById('flag').setAttribute('src', '');
+    } else {
+      document.getElementById('flag').setAttribute('src', '');
+      document
+        .getElementById('flag')
+        .setAttribute(
+          'src',
+          'flags/keep-trying-png-carry-on-and-keep-trying-without-losing-my-edge-800.png'
+        );
+      country = chooseCountry();
+      displayCountryLines(country);
+      guesses = [];
+      losses++;
+      tries = 9;
+      triesLeft = 9;
+    }
+
+    displayInfo(wins, losses, triesLeft, guesses);
+  };
 });
