@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
   var tries = 9;
   var triesLeft = 9;
   var guesses = [];
+  var alphabet = 'abcdefghijklmnopqrstuvwxyz'.toUpperCase().split('');
 
   // 2. set CSS styles
   document.getElementById('hangman').style.alignItems = 'space-between';
