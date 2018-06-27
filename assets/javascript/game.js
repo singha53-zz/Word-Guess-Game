@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function(event) {
   console.log('DOM fully loaded and parsed');
 
-  // 1. declare variables
+  // declare variables
   var wins = 0;
   var losses = 0;
   var tries = 9;
@@ -9,24 +9,24 @@ document.addEventListener('DOMContentLoaded', function(event) {
   var guesses = [];
   var alphabet = 'abcdefghijklmnopqrstuvwxyz'.toUpperCase().split('');
 
-  // 2. set CSS styles
+  // set CSS styles
   document.getElementById('hangman').style.alignItems = 'space-between';
   document.getElementById('country').style.padding = 0;
   document.getElementById('country').style.display = 'flex';
   document.getElementById('country').style.alignItems = 'space-between';
   document.getElementById('country').style.justifyContent = 'center';
 
-  // 3. list of countries the user can guess
+  // list of countries the user can guess
   countries = ['Argentina', 'Brazil', 'Morocco', 'Mexico'].map(x =>
     x.toUpperCase()
   );
 
-  // 4. function to randomly select a country
+  // function to randomly select a country
   function chooseCountry() {
     return countries[Math.round(Math.random() * (countries.length - 1))];
   }
 
-  // 5. function to display lines for placeholders for letters of different countries
+  // function to display lines for placeholders for letters of different countries
   function displayCountryLines(country) {
     // remove previous children dispatchEventvar
     myNode = document.getElementById('country');
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
 
       // add CSS to new div
       newDiv.style.width = size + 'px';
-      newDiv.style.height = size + 'px';
+      newDiv.style.height = 0.8 * size + 'px';
       newDiv.style.borderBottom = 'thick solid black';
       newDiv.style.marginRight = '10px';
       newDiv.style.textAlign = 'center';
@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
     }
   }
 
-  // 6. function to identify unique letters in strings
+  // function to identify unique letters in strings
   function unique_char(str1) {
     var str = str1;
     var uniql = '';
@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
     return uniql;
   }
 
-  // 7. function to display game summary information
+  // function to display game summary information
   function displayInfo(wins, losses, triesLeft, guesses) {
     myNode = document.getElementById('summary');
     while (myNode.firstChild) {

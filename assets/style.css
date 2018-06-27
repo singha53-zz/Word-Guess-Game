@@ -1,0 +1,50 @@
+/* set height html page to 100% */
+
+/* body {
+  height: 100%;
+  margin: 0;
+} */
+
+.container {
+  min-height: 100%;
+  min-width: 100%;
+}
+
+/* div {
+  border: 2px solid black;
+  height: 300%;
+  margin: auto;
+} */
+
+div {
+  margin: 0;
+  padding: 0;
+}
+
+/* center title */
+#title {
+  text-align: center;
+  font-family: 'Cinzel', serif;
+}
+
+.img-fluid {
+  padding-bottom: 5px;
+}
+
+h1 {
+  text-align: center;
+}
+
+#leftPanel,
+#rightPanel {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+/* #country {
+  display: flex;
+  justify-content: center;
+  align-items: space-between;
+  padding: 0;
+} */
