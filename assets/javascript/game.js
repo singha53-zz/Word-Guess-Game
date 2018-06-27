@@ -62,5 +62,40 @@ document.addEventListener('DOMContentLoaded', function(event) {
     return uniql;
   }
 
+  // 7. function to display game summary information
+  function displayInfo(wins, losses, triesLeft, guesses) {
+    myNode = document.getElementById('summary');
+    while (myNode.firstChild) {
+      myNode.removeChild(myNode.firstChild);
+    }
+
+    // add wins to summary section
+    var winsPara = document.createElement('p');
+    var winsText = document.createTextNode(`Wins: ${wins}`);
+    winsPara.appendChild(winsText);
+    myNode.appendChild(winsPara);
+
+    // add lossess to summary section
+    var lossesPara = document.createElement('p');
+    var lossesText = document.createTextNode(`Losses: ${losses}`);
+    lossesPara.appendChild(lossesText);
+    myNode.appendChild(lossesPara);
+
+    // display guesses letters
+    var guessesPara = document.createElement('p');
+    var guessesText = document.createTextNode(
+      `Letters already guessed: ${guesses.join()}`
+    );
+    guessesPara.appendChild(guessesText);
+    myNode.appendChild(guessesPara);
+
+    // number of guesses remaining
+    var remainingGuessesPara = document.createElement('p');
+    var remainingGuessesText = document.createTextNode(
+      `Number of guesses remaining: ${triesLeft}`
+    );
+    remainingGuessesPara.appendChild(remainingGuessesText);
+    myNode.appendChild(remainingGuessesPara);
+  }
 
 });
