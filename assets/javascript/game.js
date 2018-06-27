@@ -99,4 +99,8 @@ document.addEventListener('DOMContentLoaded', function(event) {
     myNode.appendChild(remainingGuessesPara);
   }
 
+  // 8. initial Hangman game
+  var country = chooseCountry();
+  displayCountryLines(country);
+  displayInfo(wins, losses, triesLeft, guesses);
 });
