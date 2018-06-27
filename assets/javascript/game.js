@@ -19,4 +19,34 @@ document.addEventListener('DOMContentLoaded', function(event) {
   countries = ['Argentina', 'Brazil', 'Morocco', 'Mexico'].map(x =>
     x.toUpperCase()
   );
+
+  // 4. function to randomly select a country
+  function chooseCountry() {
+    return countries[Math.round(Math.random() * (countries.length - 1))];
+  }
+
+  // 5. function to display lines for placeholders for letters of different countries
+  function displayCountryLines(country) {
+    // remove previous children dispatchEventvar
+    myNode = document.getElementById('country');
+    while (myNode.firstChild) {
+      myNode.removeChild(myNode.firstChild);
+    }
+    for (let i = 0; i < country.length; i++) {
+      var newDiv = document.createElement('div');
+      size = myNode.offsetWidth / country.length;
+
+      // add CSS to new div
+      newDiv.style.width = size + 'px';
+      newDiv.style.height = size + 'px';
+      newDiv.style.borderBottom = 'thick solid black';
+      newDiv.style.marginRight = '10px';
+      newDiv.style.textAlign = 'center';
+
+      // add id to each div
+      newDiv.classList.add(country[i]);
+
+      myNode.appendChild(newDiv);
+    }
+  }
 });
