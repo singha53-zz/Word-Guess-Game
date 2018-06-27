@@ -1,7 +1,7 @@
 # Word-Guess-Game
 FIFA World Cup 2018 Hangman Game
 
-![Logo of the project](https://raw.githubusercontent.com/jehna/readme-best-practices/master/sample-logo.png)
+![Logo of the project](https://upload.wikimedia.org/wikipedia/en/thumb/6/67/2018_FIFA_World_Cup.svg/227px-2018_FIFA_World_Cup.svg.png)
 
 # Word-Guess-Game
 > FIFA World Cup 2018 Hangman Game
@@ -10,7 +10,7 @@ A cool hangman game where the user guesses countries that are participating in t
 
 ## Installing / Getting started
 
-Simply head over to http://amritsingh.ca/Word-Guess-Game/ to start playing!
+Simply head [here](http://amritsingh.ca/Word-Guess-Game/) to to start playing!
 
 ## Developing
 
