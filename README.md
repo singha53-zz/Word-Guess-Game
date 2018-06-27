@@ -18,7 +18,7 @@ Feel free to modify/expand upon my code for your purposes!
 
 ```shell
 git clone https://github.com/singha53/Word-Guess-Game.git
-cd awesome-project/
+cd Word-Guess-Game/
 ```
 
 And state what happens step-by-step.
