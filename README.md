@@ -21,11 +21,12 @@ git clone https://github.com/singha53/Word-Guess-Game.git
 cd Word-Guess-Game/
 ```
 
-And state what happens step-by-step.
+## Scripting/Programming Languages
+
+* HTML, CSS, JavaScript
 
 ## Features
 
-* mobile-responsive
 * non-stop playing!
 
 ## Contributing
