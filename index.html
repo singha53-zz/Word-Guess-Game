@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Word Guess Game</title>
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+    crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/flag-icon.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <h1 id="title">
+      <i class="fas fa-trophy"></i> 2
+      <i class="far fa-futbol"></i> 18 FIFA WORLD CUP HANGMAN GAME
+      <i class="fas fa-trophy"></i>
+    </h1>
+    <h3 style="text-align: center">Press any alphabetical letter to get started!</h3>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <!-- GroupA -->
+      <div class="col-1">
+        <img class="img-fluid" src="flags/4x3/gr.svg" alt="">
+      </div>
+      <div class="col-1">
+        <img class="img-fluid" src="flags/4x3/uy.svg" alt="">
+      </div>
+      <div class="col-1">
+        <img class="img-fluid" src="flags/4x3/eg.svg" alt="">
+      </div>
+      <div class="col-1">
+        <img class="img-fluid" src="flags/4x3/sa.svg" alt="">
+      </div>
+      <!-- Group B -->
+      <div class="col-1">
+        <img class="img-fluid" src="flags/4x3/ir.svg" alt="">
+      </div>
+      <div class="col-1">
+        <img class="img-fluid" src="flags/4x3/pt.svg" alt="">
+      </div>
+      <div class="col-1">
+        <img class="img-fluid" src="flags/4x3/es.svg" alt="">
+      </div>
+      <div class="col-1">
+        <img class="img-fluid" src="flags/4x3/ma.svg" alt="">
+      </div>
+      <!-- Group C -->
+      <div class="col-1">
+        <img class="img-fluid" src="flags/4x3/fr.svg" alt="">
+      </div>
+      <div class="col-1">
+        <img class="img-fluid" src="flags/4x3/dk.svg" alt="">
+      </div>
+      <div class="col-1">
+        <img class="img-fluid" src="flags/4x3/au.svg" alt="">
+      </div>
+      <div class="col-1">
+        <img class="img-fluid" src="flags/4x3/pt.svg" alt="">
+      </div>
+    </div>
+    <div class="row">
+      <!-- Group D -->
+      <div id="leftPanel" class="col-1">
+        <img class="img-fluid" src="flags/4x3/hr.svg" alt="">
+        <img class="img-fluid" src="flags/4x3/is.svg" alt="">
+        <img class="img-fluid" src="flags/4x3/ar.svg" alt="">
+        <img class="img-fluid" src="flags/4x3/ng.svg" alt="">
+      </div>
+      <div class="col-10">
+
+        <div class="row">
+          <div class="col-6">
+            <img id="flag" class="img-fluid" src="" alt="">
+          </div>
+          <div id="hangman" class="col-6">
+            <h1>Current Country</h1>
+            <div id="country">
+            </div>
+            <div id="summary"></div>
+          </div>
+        </div>
+      </div>
+      <div id="rightPanel" class="col-1">
+        <img class="img-fluid" src="flags/4x3/rs.svg" alt="">
+        <img class="img-fluid" src="flags/4x3/br.svg" alt="">
+        <img class="img-fluid" src="flags/4x3/ch.svg" alt="">
+        <img class="img-fluid" src="flags/4x3/cr.svg" alt="">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-1">
+        <img class="img-fluid" src="flags/4x3/se.svg" alt="">
+      </div>
+      <div class="col-1">
+        <img class="img-fluid" src="flags/4x3/mx.svg" alt="">
+      </div>
+      <div class="col-1">
+        <img class="img-fluid" src="flags/4x3/kr.svg" alt="">
+      </div>
+      <div class="col-1">
+        <img class="img-fluid" src="flags/4x3/de.svg" alt="">
+      </div>
+      <div class="col-1">
+        <img class="img-fluid" src="flags/4x3/be.svg" alt="">
+      </div>
+      <div class="col-1">
+        <img class="img-fluid" src="flags/4x3/Flag_of_England.svg" alt="">
+      </div>
+      <div class="col-1">
+        <img class="img-fluid" src="flags/4x3/tn.svg" alt="">
+      </div>
+      <div class="col-1">
+        <img class="img-fluid" src="flags/4x3/pa.svg" alt="">
+      </div>
+      <div class="col-1">
+        <img class="img-fluid" src="flags/4x3/pl.svg" alt="">
+      </div>
+      <div class="col-1">
+        <img class="img-fluid" src="flags/4x3/sn.svg" alt="">
+      </div>
+      <div class="col-1">
+        <img class="img-fluid" src="flags/4x3/co.svg" alt="">
+      </div>
+      <div class="col-1">
+        <img class="img-fluid" src="flags/4x3/jp.svg" alt="">
+      </div>
+    </div>
+  </div>
+
+
+  <script src="assets/javascript/game.js"></script>
+</body>
+
+
+</html>
